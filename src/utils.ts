@@ -270,8 +270,8 @@ export function getPayloadTelegram(inputs: Readonly<TInputs>): Object {
 
   if (inputs.telegram_message_thread_id != undefined) {
     telegram_payload = {
+      ...telegram_payload,
       message_thread_id: inputs.telegram_message_thread_id,
-      ...telegram_payload
     }
   }
 
