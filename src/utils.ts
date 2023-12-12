@@ -264,9 +264,13 @@ export function getPayloadTelegram(inputs: Readonly<TInputs>): Object {
   };
 
   logDebug(JSON.stringify(inputs.telegram_message_thread_id !== "2"));
+  logDebug(JSON.stringify(!inputs.telegram_message_thread_id));
 
-  if (inputs.telegram_message_thread_id) {
-    telegram_payload.message_thread_id = inputs.telegram_message_thread_id;
+  if (inputs.telegram_message_thread_id != undefined) {
+    telegram_payload = {
+      message_thread_id: inputs.telegram_message_thread_id,
+      ...telegram_payload
+    }
   }
 
   logDebug(JSON.stringify(telegram_payload));
