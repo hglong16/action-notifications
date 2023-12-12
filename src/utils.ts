@@ -48,7 +48,6 @@ export const getInputs = (): TInputs => {
   const title = getInput('title').trim() || '';
   const description = getInput('description').trim() || '';
   const qrcode = getInput('qrcode').trim() || '';
-  telegram_bot_token;
 
   return {
     discord_webhook,
