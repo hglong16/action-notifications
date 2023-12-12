@@ -1,6 +1,6 @@
-name: 'Github Action Notification'
+name: 'Github Action Notification Testing'
 description: 'Github Action Notification with Discord and Slack'
-author: 'hunghg255'
+author: 'hglong16'
 branding:
   icon: "package"
   color: "gray-dark"
