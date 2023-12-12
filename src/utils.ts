@@ -263,6 +263,8 @@ export function getPayloadTelegram(inputs: Readonly<TInputs>): Object {
     parse_mode: 'MarkdownV2',
   };
 
+  logDebug(JSON.stringify(inputs.telegram_message_thread_id !== "2"));
+
   if (inputs.telegram_message_thread_id) {
     telegram_payload.message_thread_id = inputs.telegram_message_thread_id;
   }
